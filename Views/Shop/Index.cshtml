@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<MyUser> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
+
+<h1>@user?.FirstName</h1>
+<h1>@user?.LastName</h1>
+<h1>@user?.Address</h1>
+<h1>@user?.Email</h1>
+<h1>@user?.Email</h1>
